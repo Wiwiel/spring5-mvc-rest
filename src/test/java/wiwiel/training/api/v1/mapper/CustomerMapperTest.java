@@ -22,7 +22,7 @@ class CustomerMapperTest {
         customer.setId(ID);
 
         //when
-        CustomerDTO customerDTO = customerMapper.customerToCustomerDTO(customer);
+        CustomerDTO customerDTO = customerMapper.customerToCustomerDto(customer);
 
         //then
         assertEquals(ID, customerDTO.getId());
