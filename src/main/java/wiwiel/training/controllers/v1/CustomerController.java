@@ -5,8 +5,6 @@ import wiwiel.training.api.v1.model.CustomerDTO;
 import wiwiel.training.api.v1.model.CustomerListDTO;
 import wiwiel.training.services.CustomerService;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 
 @RestController
 @RequestMapping(CustomerController.BASE_URL)

@@ -10,6 +10,7 @@ import wiwiel.training.bootstrap.Bootstrap;
 import wiwiel.training.domain.Customer;
 import wiwiel.training.repositories.CategoryRepository;
 import wiwiel.training.repositories.CustomerRepository;
+import wiwiel.training.repositories.VendorRepository;
 
 import java.util.List;
 
@@ -27,6 +28,9 @@ public class CustomerServiceIT {
     @Autowired
     CategoryRepository categoryRepository;
 
+    @Autowired
+    VendorRepository vendorRepository;
+
     CustomerService customerService;
 
     @BeforeEach
@@ -35,7 +39,7 @@ public class CustomerServiceIT {
         System.out.println(customerRepository.findAll().size());
 
         //setup data for testing
-        Bootstrap bootstrap = new Bootstrap(categoryRepository, customerRepository);
+        Bootstrap bootstrap = new Bootstrap(categoryRepository, customerRepository, vendorRepository);
         bootstrap.run(); //load data
 
         customerService = new CustomerServiceImpl(customerRepository, CustomerMapper.INSTANCE);

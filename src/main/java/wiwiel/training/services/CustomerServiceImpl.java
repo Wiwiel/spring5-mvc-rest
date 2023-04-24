@@ -36,8 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerDTO getCustomerById(Long id) {
         CustomerDTO customer = customerMapper.customerToCustomerDto(customerRepository.findById(id)
                 .orElseThrow(ResourceNotFoundException::new));
-        if(customer != null)
-            customer.setCustomerUrl(getCustomerUrl(customer.getId()));
+        customer.setCustomerUrl(getCustomerUrl(id));
         return customer;
     }
 
