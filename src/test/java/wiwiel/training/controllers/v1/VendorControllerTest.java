@@ -31,7 +31,6 @@ import static wiwiel.training.controllers.v1.AbstractRestControllerTest.asJsonSt
 class VendorControllerTest {
     
     public static final String NAME = "Fruits Ltd";
-    public static final long ID = 1L;
 
     @Mock
     VendorService vendorService;
@@ -52,12 +51,10 @@ class VendorControllerTest {
     @Test
     public void testListCategories() throws Exception {
         VendorDTO vendor1 = new VendorDTO();
-        vendor1.setId(ID);
         vendor1.setName(NAME);
         vendor1.setVendorUrl(VendorController.BASE_URL + "1");
 
         VendorDTO vendor2 = new VendorDTO();
-        vendor2.setId(2L);
         vendor2.setName("Bob");
         vendor1.setVendorUrl(VendorController.BASE_URL + "2");
 
@@ -74,7 +71,6 @@ class VendorControllerTest {
     @Test
     public void testGetByIdVendors() throws Exception {
         VendorDTO vendor1 = new VendorDTO();
-        vendor1.setId(ID);
         vendor1.setName(NAME);
         vendor1.setVendorUrl(VendorController.BASE_URL + "1");
 
@@ -92,7 +88,6 @@ class VendorControllerTest {
         vendor.setName(NAME);
 
         VendorDTO returnVendor = new VendorDTO();
-        returnVendor.setId(ID);
         returnVendor.setName(NAME);
         returnVendor.setVendorUrl(VendorController.BASE_URL + "1");
 
@@ -113,7 +108,6 @@ class VendorControllerTest {
         vendor.setName(NAME);
 
         VendorDTO returnVendor = new VendorDTO();
-        returnVendor.setId(ID);
         returnVendor.setName(NAME);
         returnVendor.setVendorUrl(VendorController.BASE_URL + "1");
 
@@ -136,7 +130,6 @@ class VendorControllerTest {
         vendor.setName(NAME);
 
         VendorDTO returnVendor = new VendorDTO();
-        returnVendor.setId(ID);
         returnVendor.setName(vendor.getName());
         returnVendor.setVendorUrl(VendorController.BASE_URL + "1");
 

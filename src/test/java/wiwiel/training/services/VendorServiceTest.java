@@ -55,7 +55,6 @@ class VendorServiceTest {
 
         VendorDTO vendorDTO = vendorService.getVendorById(ID);
 
-        assertEquals(ID, vendorDTO.getId());
         assertEquals(NAME, vendorDTO.getName());
         assertEquals(VendorController.BASE_URL + "1", vendorDTO.getVendorUrl());
     }

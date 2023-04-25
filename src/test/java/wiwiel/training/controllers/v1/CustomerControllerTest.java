@@ -30,7 +30,6 @@ import static wiwiel.training.controllers.v1.AbstractRestControllerTest.asJsonSt
 class CustomerControllerTest {
     public static final String FIRSTNAME = "Joe";
     public static final String LASTNAME = "Doe";
-    public static final long ID = 1L;
 
     @Mock
     CustomerService customerService;
@@ -51,13 +50,11 @@ class CustomerControllerTest {
     @Test
     public void testListCategories() throws Exception {
         CustomerDTO customer1 = new CustomerDTO();
-        customer1.setId(ID);
         customer1.setFirstname(FIRSTNAME);
         customer1.setLastname(LASTNAME);
         customer1.setCustomerUrl(CustomerController.BASE_URL + "1");
 
         CustomerDTO customer2 = new CustomerDTO();
-        customer2.setId(2L);
         customer2.setFirstname("Bob");
         customer2.setLastname("Bobby");
         customer1.setCustomerUrl(CustomerController.BASE_URL + "2");
@@ -75,7 +72,6 @@ class CustomerControllerTest {
     @Test
     public void testGetByIdCustomers() throws Exception {
         CustomerDTO customer1 = new CustomerDTO();
-        customer1.setId(ID);
         customer1.setFirstname(FIRSTNAME);
         customer1.setLastname(LASTNAME);
         customer1.setCustomerUrl(CustomerController.BASE_URL + "1");
@@ -95,7 +91,6 @@ class CustomerControllerTest {
         customer.setLastname(LASTNAME);
 
         CustomerDTO returnCustomer = new CustomerDTO();
-        returnCustomer.setId(ID);
         returnCustomer.setFirstname(FIRSTNAME);
         returnCustomer.setLastname(LASTNAME);
         returnCustomer.setCustomerUrl(CustomerController.BASE_URL + "1");
@@ -118,7 +113,6 @@ class CustomerControllerTest {
         customer.setLastname(LASTNAME);
 
         CustomerDTO returnCustomer = new CustomerDTO();
-        returnCustomer.setId(ID);
         returnCustomer.setFirstname(FIRSTNAME);
         returnCustomer.setLastname(LASTNAME);
         returnCustomer.setCustomerUrl(CustomerController.BASE_URL + "1");
@@ -143,7 +137,6 @@ class CustomerControllerTest {
         customer.setFirstname(FIRSTNAME);
 
         CustomerDTO returnCustomer = new CustomerDTO();
-        returnCustomer.setId(ID);
         returnCustomer.setFirstname(customer.getFirstname());
         returnCustomer.setLastname(LASTNAME);
         returnCustomer.setCustomerUrl(CustomerController.BASE_URL + "1");

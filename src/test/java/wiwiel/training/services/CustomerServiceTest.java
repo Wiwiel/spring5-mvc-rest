@@ -56,7 +56,6 @@ class CustomerServiceTest {
 
         CustomerDTO customerDTO = customerService.getCustomerById(ID);
 
-        assertEquals(ID, customerDTO.getId());
         assertEquals(FIRSTNAME, customerDTO.getFirstname());
         assertEquals(LASTNAME, customerDTO.getLastname());
         assertEquals(CustomerController.BASE_URL + "1", customerDTO.getCustomerUrl());
